@@ -1,0 +1,21 @@
+.bigCalendar-container {
+    margin: 0 auto;
+    background-color: white;
+    color:  black;
+}
+.calendar-title {
+    color: #3EB2FD;
+}
+
+.principal-titulo{
+    margin-left: 40px;
+}
+.navegacion {
+    margin-bottom: 20px;
+}
+.contenido {
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    flex-direction: column;
+}

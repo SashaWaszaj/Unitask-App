@@ -1,0 +1,18 @@
+# .gitignore
+# Ignorar carpetas del sistema
+Application Data/
+Cookies/
+Documents/My Music/
+Documents/My Pictures/
+Documents/My Videos/
+Local Settings/
+NTUSER.*
+
+# Ignorar carpetas y configuraciones locales
+.DS_Store
+*.log
+*.tmp
+.vscode/
+node_modules/
+dist/
+build/

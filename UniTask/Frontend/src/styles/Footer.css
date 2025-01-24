@@ -1,0 +1,64 @@
+/* Estilo general del footer */
+.footer {
+    background-color: #476e9b; /* Azul oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* Contenedor principal */
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+  
+  /* Secciones del footer */
+  .footer-about, .footer-links, .footer-socials {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  /* Títulos */
+  .footer-about h2, .footer-links h3, .footer-socials h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  /* Texto descriptivo */
+  .footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Enlaces */
+  .footer-links ul, .footer-socials ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li, .footer-socials li {
+    margin: 5px 0;
+  }
+  
+  .footer-links a, .footer-socials a {
+    color: #ffcc00; /* Amarillo académico */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover, .footer-socials a:hover {
+    color: #ffffff; /* Blanco al pasar el mouse */
+  }
+  
+  /* Sección de copyright */
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+  }
+  
