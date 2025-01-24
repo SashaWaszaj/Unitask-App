@@ -7,7 +7,7 @@ const CalendarPage = () => {
 
   const fetchEvents = async () => {
     try {
-      const coursesResponse = await Axios.get('http://localhost:8080/course');
+      const coursesResponse = await Axios.get('https://unitask-app.onrender.com/course');
       const courses = coursesResponse.data.map(course => ({
         title: course.name,
         start: new Date(course.date),
@@ -16,7 +16,7 @@ const CalendarPage = () => {
         color: '#ff6347' 
       }));
 
-      const examsResponse = await Axios.get('http://localhost:8080/exam');
+      const examsResponse = await Axios.get('https://unitask-app.onrender.com/exam');
       const exams = examsResponse.data.map(exam => ({
         title: exam.title,
         start: new Date(exam.date),
@@ -24,7 +24,7 @@ const CalendarPage = () => {
         allDay: true,
         color: '#4682b4' 
       }));
-      const projectsResponse = await Axios.get('http://localhost:8080/project');
+      const projectsResponse = await Axios.get('https://unitask-app.onrender.com/project');
       const projects = projectsResponse.data.map(project => ({
         title: project.title,
         start: new Date(project.dueDate),
