@@ -10,7 +10,7 @@ const SubjectList = () => {
   useEffect(() => {
     const allSubjects = async () => {
       try {
-        const response = await Axios.get('http://localhost:8080/subject');
+        const response = await Axios.get('https://unitask-app.onrender.com/subject');
         console.log(response.data);
         setSubjects(response.data);
       } catch (error) {
@@ -23,7 +23,7 @@ const SubjectList = () => {
 
   const deleteSubject = async (id) => {
     try {
-      await Axios.delete(`http://localhost:8080/subject/delete/${id}`);
+      await Axios.delete(`https://unitask-app.onrender.com/subject/delete/${id}`);
       setSubjects(subjects.filter(subject => subject._id !== id));
       navigate('/subject');
     } catch (error) {

@@ -21,7 +21,7 @@ const GradeForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await Axios.post('http://localhost:8080/grade/create', grade);
+            const response = await Axios.post('https://unitask-app.onrender.com/grade/create', grade);
             console.log(response);
             setGrade({
                 title: '',

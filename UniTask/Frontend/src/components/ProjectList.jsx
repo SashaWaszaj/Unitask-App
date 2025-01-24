@@ -10,7 +10,7 @@ const ProjectList = () => {
   useEffect(() => {
     const getAllProjects = async () => {
       try {
-        const URL = "http://localhost:8080/project";
+        const URL = "https://unitask-app.onrender.com/project";
         const respuesta = await axios.get(URL);
         const sortedProjects = respuesta.data.sort((a, b) => {
         return new Date(a.dueDate) - new Date(b.dueDate); 
@@ -28,7 +28,7 @@ const ProjectList = () => {
 
   const deleteProjects = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/project/delete/${id}`);
+      await axios.delete(`https://unitask-app.onrender.com/project/delete/${id}`);
       setProjects(projects.filter(project => project._id !== id));
       navigate('/project');
     } catch (error) {

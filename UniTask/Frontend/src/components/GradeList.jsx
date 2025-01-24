@@ -11,7 +11,7 @@ const GradeList = () => {
   useEffect(() => {
     const getAllGrades = async () => {
       try {
-        const URL = "http://localhost:8080/grade/";
+        const URL = "https://unitask-app.onrender.com/grade/";
         const respuesta = await axios.get(URL);
         
         setGrades(respuesta.data);
@@ -31,7 +31,7 @@ const GradeList = () => {
 
   const deleteGrade = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/grade/delete/${id}`);
+      await axios.delete(`https://unitask-app.onrender.com/grade/delete/${id}`);
       setGrades(grades.filter(grade => grade._id !== id));
 
       const updatedGrades = grades.filter(grade => grade._id !== id);

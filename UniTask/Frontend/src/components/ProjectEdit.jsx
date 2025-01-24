@@ -16,7 +16,7 @@ const ProjectEdit = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await Axios.get(`http://localhost:8080/project/${id}`);
+        const response = await Axios.get(`https://unitask-app.onrender.com/project/${id}`);
         const projectData = response.data;
         setProject({
           ...projectData,
@@ -44,7 +44,7 @@ const ProjectEdit = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await Axios.put(`http://localhost:8080/project/update/${id}`, project);
+      await Axios.put(`https://unitask-app.onrender.com/project/update/${id}`, project);
       navigate('/project'); 
     } catch (error) {
       console.error('Error updating project', error);

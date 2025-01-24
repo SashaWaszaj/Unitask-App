@@ -16,7 +16,7 @@ const ExamEdit = () => {
   useEffect(() => {
     const fetchExam = async () => {
       try {
-        const response = await Axios.get(`http://localhost:8080/exam/${id}`);
+        const response = await Axios.get(`https://unitask-app.onrender.com/exam/${id}`);
         const examData = response.data;
         setExam({
           ...examData,
@@ -44,7 +44,7 @@ const ExamEdit = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await Axios.put(`http://localhost:8080/exam/${id}/edit`, exam);
+      await Axios.put(`https://unitask-app.onrender.com/exam/${id}/edit`, exam);
       navigate('/exam'); 
     } catch (error) {
       console.error('Error updating exam', error);

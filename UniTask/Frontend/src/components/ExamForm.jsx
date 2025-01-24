@@ -21,7 +21,7 @@ const ExamForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await Axios.post('http://localhost:8080/exam/new', exam);
+            const response = await Axios.post('https://unitask-app.onrender.com/exam/new', exam);
             console.log(response);
             setExam({
                 title: '',

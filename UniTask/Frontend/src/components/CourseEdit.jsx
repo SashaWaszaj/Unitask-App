@@ -22,7 +22,7 @@ const CourseEdit = () => {
   useEffect(() => {
     const allCourse = async () => {
       try {
-        const response = await Axios.get(`http://localhost:8080/course/${id}`);
+        const response = await Axios.get(`https://unitask-app.onrender.com/course/${id}`);
         const courseData = response.data;
         setCourse({
           ...courseData,
@@ -46,7 +46,7 @@ const CourseEdit = () => {
   const updateCourse = async (e) => {
     e.preventDefault();
     try {
-      await Axios.put(`http://localhost:8080/course/${id}/edit`, course);
+      await Axios.put(`https://unitask-app.onrender.com/course/${id}/edit`, course);
       setError(null);
       navigate('/course'); 
     } catch (error) {

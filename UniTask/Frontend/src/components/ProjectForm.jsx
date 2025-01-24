@@ -21,7 +21,7 @@ const ProjectForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await Axios.post('http://localhost:8080/project/create', project);
+            const response = await Axios.post('https://unitask-app.onrender.com/project/create', project);
             console.log(response);
             setProject({
                 title: '',

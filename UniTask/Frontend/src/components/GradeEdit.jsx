@@ -16,7 +16,7 @@ const GradeEdit = () => {
   useEffect(() => {
     const fetchGrade = async () => {
       try {
-        const response = await Axios.get(`http://localhost:8080/grade/${id}`);
+        const response = await Axios.get(`https://unitask-app.onrender.com/grade/${id}`);
         const gradeData = response.data;
         setGrade({
           ...gradeData,
@@ -38,7 +38,7 @@ const GradeEdit = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await Axios.put(`http://localhost:8080/grade/update/${id}`, grade);
+      await Axios.put(`https://unitask-app.onrender.com/grade/update/${id}`, grade);
       navigate('/grade'); 
     } catch (error) {
       console.error('Error updating grade', error);

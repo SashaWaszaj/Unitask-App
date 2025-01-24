@@ -22,7 +22,7 @@ const CourseForm = () => {
     e.preventDefault();
     try {
       const response = await Axios.post(
-        "http://localhost:8080/course/new", course
+        "https://unitask-app.onrender.com/course/new", course
       );
       console.log(response);
       setCourse({

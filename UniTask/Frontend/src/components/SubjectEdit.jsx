@@ -18,7 +18,7 @@ const SubjectEdit = () => {
   useEffect(() => {
     const fetchSubject = async () => {
       try {
-        const response = await Axios.get(`http://localhost:8080/subject/${id}`);
+        const response = await Axios.get(`https://unitask-app.onrender.com/subject/${id}`);
         const subjectData = response.data;
         setSubject(subjectData);
       } catch (error) {
@@ -38,7 +38,7 @@ const SubjectEdit = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await Axios.put(`http://localhost:8080/subject/${id}/edit`, subject);
+      await Axios.put(`https://unitask-app.onrender.com/subject/${id}/edit`, subject);
       navigate('/subject');
     } catch (error) {
       console.error('Error updating subject', error);

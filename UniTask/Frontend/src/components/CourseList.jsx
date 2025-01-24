@@ -10,7 +10,7 @@ const CourseList = () => {
   useEffect(() => {
     const allCourses = async () => {
       try {
-        const URL = "http://localhost:8080/course";
+        const URL = "https://unitask-app.onrender.com/course";
         const respuesta = await axios.get(URL);
         const sortedCourses = respuesta.data.sort((a, b) => {
           return new Date(a.dueDate) - new Date(b.dueDate); 
@@ -27,7 +27,7 @@ const CourseList = () => {
 
   const deleteCourse = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/course/delete/${id}`);
+      await axios.delete(`https://unitask-app.onrender.com/course/delete/${id}`);
       setCourses(courses.filter(course => course._id !== id));
       navigate('/course');
     } catch (error) {

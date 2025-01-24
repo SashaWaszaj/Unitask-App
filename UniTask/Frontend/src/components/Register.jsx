@@ -24,7 +24,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8080/project/register', formData);
+      const response = await axios.post('https://unitask-app.onrender.com/project/register', formData);
       console.log(response.data);
 
       navigate("/");

@@ -22,7 +22,7 @@ const SubjectForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await Axios.post("http://localhost:8080/subject/new", subject);
+      const response = await Axios.post("https://unitask-app.onrender.com/subject/new", subject);
       console.log('Server response:', response);
       setSubject({
         name: '',

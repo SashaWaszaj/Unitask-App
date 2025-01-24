@@ -10,7 +10,7 @@ const ExamList = () => {
   useEffect(() => {
     const getAllExams = async () => {
       try {
-        const URL = "http://localhost:8080/exam";
+        const URL = "https://unitask-app.onrender.com/exam";
         const respuesta = await axios.get(URL);
         const sortedExams = respuesta.data.sort((a, b) => {
           return new Date(a.dueDate) - new Date(b.dueDate); 
@@ -27,7 +27,7 @@ const ExamList = () => {
 
   const deleteExam = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/exam/delete/${id}`);
+      await axios.delete(`https://unitask-app.onrender.com/exam/delete/${id}`);
       setExams(exams.filter(exam => exam._id !== id));
       navigate('/exam');
     } catch (error) {
