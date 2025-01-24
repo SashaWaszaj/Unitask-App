@@ -17,7 +17,7 @@ const port = 8080;
 app.use(helmet());
 app.use(express.json());
 const corsOptions = {
-    origin: ['http://localhost:5173', 'https://unitask-app.onrender.com'],
+    origin: ['http://localhost:5173', 'https://unitask-app.netlify.app'],
       methods: 'GET,POST,PUT,DELETE',
     };
     app.use(cors(corsOptions));
