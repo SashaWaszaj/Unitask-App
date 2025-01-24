@@ -5,12 +5,16 @@ const courseRoutes = require("./routes/course.routes");
 const examRoutes = require("./routes/exam.routes");
 const subjectRoutes = require('./routes/subject.routes');
 const GradeRoutes = require('./routes/grade.routes');
-
+require('dotenv').config();
+const helmet = require('helmet');
 require("./config/config.mongoose");
+
+const MONGO_URI = process.env.MONGO_URI;
 
 const app = express();
 const port = 8080;
 
+app.use(helmet());
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({extended:true}));
