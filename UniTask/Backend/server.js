@@ -16,7 +16,11 @@ const port = 8080;
 
 app.use(helmet());
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+    origin: ['http://localhost:5173', 'https://unitask-app.onrender.com'],
+      methods: 'GET,POST,PUT,DELETE',
+    };
+    app.use(cors(corsOptions));
 app.use(express.urlencoded({extended:true}));
 
 app.use("/project", projectRoutes);
